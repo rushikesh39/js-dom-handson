@@ -1,0 +1,77 @@
+.parent{
+    width: 100%;
+    display: flex;
+}
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 2px solid black;
+    margin: 10px;
+}
+/* -------------------------------------------------------- */
+#game{
+    background-color: rgb(40, 20, 20);
+    color: wheat;
+}
+#play{
+    height: 50px;
+    width: 150px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.play{
+    display: flex;
+    justify-content:space-around;
+    font-size: 25px;
+
+}
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    height: 5px;
+    background-color: wheat;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* position: absolute; */
+}
+.num{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    top: 170px;
+    left: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: black;
+    
+}
+.gamecontainer{
+    display: flex;
+    justify-content: space-around;
+}
+.game-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#number{
+    height: 50px;
+    width: 200px;
+    font-size: 26px;
+}
+#check{
+    width: 100px;
+    height: 50px;
+    font-size: 26px;
+}
+.game-item p{
+    font-size:20px;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body >
+    <pre>
+        Q1:-Write the code to access element which is having id as "text"
+    </pre>
+    <div id="text" class="container">hello world..!</div>
+    <pre>
+        let element = document.getElementById("text");
+        console.log(element.innerText);
+    </pre>
+    <hr />
+
+    <pre>
+        Q2:-Write the code to access element which is having tag as "h1"
+    </pre>
+    <h1>Hello World...!</h1>
+    <pre>
+        let tagname=document.getElementsByTagName('h1');
+        console.log(tagname[0].innerText);
+    </pre>
+    <hr />
+
+    <pre>
+        Q3:-Write the code to access element which is having class as "box"
+    </pre>
+    <div class="box">Hello world</div>
+    <pre>
+        let clasname=document.getElementsByClassName('box');
+        console.log(clasname[0].innerText);
+    </pre>
+    <hr />
+
+    <pre>
+Q4:-
+        "h1  Hello  h1
+
+        Change the heading from ""Hello"" to ""Hello World"" using DOM functions"
+    </pre>
+    <h1 id="q4">Hello</h1>
+    <button onclick="callMe()">Click me</button>
+    <hr />
+
+    <pre>
+        Q5:-Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"
+    </pre>
+    <h1 id="q5">Hello World</h1>
+    <button onclick="clickMe()">Click me</button>
+    <pre>
+        function clickMe(){
+            let mytext=document.getElementById('q5')
+            mytext.innerText="Welcome to Elevation academy";
+        }
+    </pre>
+    <hr />
+
+    <pre>
+Q6:-
+        "
+        Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"
+    </pre>
+    <h1 id="q6">Hello</h1>
+    <pre>
+        let text6=document.getElementById('q6');
+        text6.setAttribute('style','color:red');
+    </pre>
+    <hr />
+    <pre>
+        Q7:-
+        Create three cards on HTML page and arrange them using flex property in row or horizontal
+         direction and also create button at the bottom named "Change Flex direction". When user clicks 
+         on this button, the cards arrangement should be changed to vertical direction.
+    </pre>
+    <div class="parent">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+    <button id="direction">Change direction</button>
+    <pre>
+        let parent=document.getElementsByClassName('parent');
+        let btn=document.getElementById("direction");
+        
+        let count=0;
+        btn.addEventListener('click',()=>{
+        if(count%2===0){
+            parent[0].setAttribute('style','flex-direction: column');
+            count++;
+        }
+        else{
+            parent[0].setAttribute('style','flex-direction: row');
+            count++;
+        }
+        })
+    </pre>
+    <hr />
+    <pre>
+        Q8:-
+        What’s the difference between window vs document?
+    </pre>
+    <table>
+      <tr>
+        <th>Document</th>
+        <th>window</th>
+      </tr>
+      <tr>
+        <td>It represents the document loaded inside the window or browser.</td>
+        <td>
+          It represents the browser window in which you are seeing the content.
+        </td>
+      </tr>
+      <tr>
+        <td>The properties related to it are stored in the document object.</td>
+        <td>The properties related to it are stored in the window object.</td>
+      </tr>
+      <tr>
+        <td>
+          It is loaded after the loading window because the window contains a
+          document
+        </td>
+        <td>
+          It is loaded before the document because of the window container
+          document.
+        </td>
+      </tr>
+      <tr>
+        <td>It is the root element of the document object model.</td>
+        <td>
+          The window is the global element for all objects, functions, etc.
+        </td>
+      </tr>
+      <tr>
+        <td>It is an object of the window.</td>
+        <td>It is an object of the browser.</td>
+      </tr>
+      <tr>
+        <td>
+          We can not access windows objects properties inside the document.
+        </td>
+        <td>We can access document object properties inside the window.</td>
+      </tr>
+      <tr>
+        <td>logically: document:{ properties}</td>
+        <td>logically: window:{ document:{properties} }</td>
+      </tr>
+    </table>
+    <pre></pre>
+    <hr />
+    <pre>
+        Q9:-
+        Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second
+    </pre>
+    <h3 id="q9">12:23:34</h3>
+    <pre>
+        let clockTime=document.getElementById('q9');
+        function clock(){
+            let date= new Date();
+            let h=date.getHours();
+            let m=date.getMinutes();
+            let s=date.getSeconds();
+        
+            let time=`${h} : ${m} : ${s}`;
+            
+            clockTime.innerText=time;
+        }
+        setInterval(()=>{
+            clock();
+        },1000)
+    </pre>
+
+    <hr />
+    <h3>lets play Game</h3>
+    <a href="game.html">Click Here to Start</a>
+    <script src="./index.js"></script>
+  </body>
+</html>
